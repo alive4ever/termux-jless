@@ -1,9 +1,9 @@
 diff --git a/packages/jless/build.sh b/packages/jless/build.sh
 new file mode 100644
-index 0000000..accfcfa
+index 0000000..0554d7f
 --- /dev/null
 +++ b/packages/jless/build.sh
-@@ -0,0 +1,20 @@
+@@ -0,0 +1,15 @@
 +TERMUX_PKG_HOMEPAGE=https://jless.io
 +TERMUX_PKG_DESCRIPTION="A command-line JSON viewer designed for reading, exploring, and searching through JSON data."
 +TERMUX_PKG_LICENSE="MIT"
@@ -19,8 +19,3 @@ index 0000000..accfcfa
 +termux_step_pre_configure() {
 +	termux_setup_rust
 +}
-+
-+termux_step_post_make_install() {
-+	install -Dm700 -t "$TERMUX_PREFIX"/bin target/"${CARGO_TARGET_NAME}"/release/"${CARGO_TARGET_NAME}"
-+	}
-+
