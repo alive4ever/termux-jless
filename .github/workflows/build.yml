@@ -29,4 +29,4 @@ jobs:
           TAG="$(git describe --tag)"
           OUTDIR="./termux-packages/output"
           gh release create "$TAG" --verify-tag --generate-notes
-          gh release upload "$TAG" "$OUTDIR"/*
+          gh release upload "$TAG" "$OUTDIR"/jless*
